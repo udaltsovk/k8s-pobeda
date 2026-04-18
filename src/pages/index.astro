@@ -1,0 +1,228 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="КУБЫПОБЕДА.РФ" description="Очередной год победы Kubernetes.">
+  <div class="relative flex h-screen items-center justify-center overflow-hidden text-center">
+    <div
+      id="hero-background"
+      class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_center,_#ebf4ff_0%,_#ffffff_100%)]"
+    >
+    </div>
+    <div
+      class="hero-overlay absolute inset-0 -z-10 bg-[linear-gradient(180deg,_rgba(255,255,255,0)_0%,_rgba(255,255,255,0.8)_100%)]"
+    >
+    </div>
+    <div class="z-10 px-8">
+      <img
+        src="/kubernetes-logo.svg"
+        alt="Kubernetes Logo"
+        class="mb-8 inline-block h-[180px] w-[180px] animate-[spin_30s_linear_infinite] drop-shadow-[0_4px_6px_rgba(50,108,229,0.2)] sm:h-[220px] sm:w-[220px]"
+        width="180"
+        height="180"
+        fetchpriority="high"
+      />
+      <h1
+        class="m-0 text-[clamp(3rem,8vw,6rem)] font-black uppercase tracking-[-0.02em] text-[#326ce5]"
+      >
+        КУБЫПОБЕДА
+      </h1>
+      <p class="mt-2 text-[clamp(1.2rem,3vw,2rem)] font-light text-[#5f6368]">
+        Очередной год победы Kubernetes
+      </p>
+    </div>
+    <a
+      href="#main-content"
+      class="scroll-down-arrow absolute bottom-10 left-1/2 -translate-x-1/2 text-[#326ce5] opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100"
+      aria-label="Перейти к основному содержимому"
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <path d="M12 5v14M19 12l-7 7-7-7"></path>
+      </svg>
+    </a>
+  </div>
+
+  <main id="main-content" class="mx-auto max-w-6xl px-8 py-16 lg:px-10">
+    <section class="mb-24 text-center">
+      <h2 class="mb-4 text-[clamp(2rem,4vw,3rem)] text-[#0f1316]">Статус: SYNCING</h2>
+      <p class="mb-12 text-2xl text-[#5f6368]">
+        Почему <span id="current-year"></span> это год кубов?
+      </p>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div
+          class="rounded-xl border border-[#e2e8f0] bg-[#f8f9fa] p-8 text-left transition duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div class="mb-4 h-12 w-12 text-[#326ce5]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              ><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"></path><polyline
+                points="14 2 14 8 20 8"></polyline><path d="M2 15h10"></path><path d="M9 18v-6"
+              ></path></svg
+            >
+          </div>
+          <h3 class="mb-4 text-2xl font-semibold text-[#0f1316]">YAML Native</h3>
+          <p class="m-0 text-[#5f6368]">
+            Родной язык конфигурации. Отступы важнее смысла, а количество строк измеряется тысячами.
+          </p>
+        </div>
+        <div
+          class="rounded-xl border border-[#e2e8f0] bg-[#f8f9fa] p-8 text-left transition duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div class="mb-4 h-12 w-12 text-[#326ce5]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              ><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"
+              ></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg
+            >
+          </div>
+          <h3 class="mb-4 text-2xl font-semibold text-[#0f1316]">OOMKilled</h3>
+          <p class="m-0 text-[#5f6368]">
+            Не ошибка, а запланированная процедура очистки памяти. Решение всегда одно - увеличить
+            лимиты.
+          </p>
+        </div>
+        <div
+          class="rounded-xl border border-[#e2e8f0] bg-[#f8f9fa] p-8 text-left transition duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.05)]"
+        >
+          <div class="mb-4 h-12 w-12 text-[#326ce5]">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              ><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect
+                x="2"
+                y="14"
+                width="20"
+                height="8"
+                rx="2"
+                ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line
+                x1="6"
+                y1="18"
+                x2="6.01"
+                y2="18"></line></svg
+            >
+          </div>
+          <h3 class="mb-4 text-2xl font-semibold text-[#0f1316]">Масштаб</h3>
+          <p class="m-0 text-[#5f6368]">
+            Зачем один сервер, если можно поднять целый кластер ради статического сайта? (но, увы,
+            не в этом случае)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-24 rounded-[20px] bg-[#326ce5] px-8 py-16 text-center text-white">
+      <h2 class="mb-4 text-[clamp(2rem,4vw,3rem)]">Стабильность кластера</h2>
+      <div id="victory-counter" class="my-12 flex flex-wrap justify-center gap-4 md:gap-8">
+        <div
+          class="flex min-w-20 flex-col rounded-[10px] bg-[rgba(15,19,22,0.16)] px-4 py-2 md:min-w-[120px] md:px-8 md:py-4"
+        >
+          <span class="text-4xl font-bold tabular-nums md:text-5xl" id="counter-hours">00</span>
+          <span class="text-base uppercase tracking-[0.1em] text-white">Часов</span>
+        </div>
+        <div
+          class="flex min-w-20 flex-col rounded-[10px] bg-[rgba(15,19,22,0.16)] px-4 py-2 md:min-w-[120px] md:px-8 md:py-4"
+        >
+          <span class="text-4xl font-bold tabular-nums md:text-5xl" id="counter-minutes">00</span>
+          <span class="text-base uppercase tracking-[0.1em] text-white">Минут</span>
+        </div>
+        <div
+          class="flex min-w-20 flex-col rounded-[10px] bg-[rgba(15,19,22,0.16)] px-4 py-2 md:min-w-[120px] md:px-8 md:py-4"
+        >
+          <span class="text-4xl font-bold tabular-nums md:text-5xl" id="counter-seconds">00</span>
+          <span class="text-base uppercase tracking-[0.1em] text-white">Секунд</span>
+        </div>
+        <div
+          class="flex min-w-20 flex-col rounded-[10px] bg-[rgba(15,19,22,0.16)] px-4 py-2 md:min-w-[120px] md:px-8 md:py-4"
+        >
+          <span class="text-4xl font-bold tabular-nums md:text-5xl" id="counter-ms">000</span>
+          <span class="text-base uppercase tracking-[0.1em] text-white">мс</span>
+        </div>
+      </div>
+      <p class="text-[1.1rem] text-white">Времени прошло с момента последнего Pending пода</p>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#e2e8f0] bg-[#f8f9fa] px-8 py-12 text-center text-[#5f6368]">
+    <p>Крутится на Github Pages (денег на кубовый кластер не хватило)</p>
+    <p>
+      Сурсы на
+      <a
+        class="font-bold text-[#326ce5] hover:underline"
+        href="https://github.com/misshanya/k8s-pobeda">GitHub</a
+      >
+    </p>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const yearElement = document.getElementById("current-year");
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear().toString();
+      }
+
+      const arrow = document.querySelector(".scroll-down-arrow");
+      if (arrow instanceof HTMLAnchorElement) {
+        arrow.addEventListener("click", e => {
+          e.preventDefault();
+          const targetId = arrow.getAttribute("href");
+          if (!targetId) {
+            return;
+          }
+
+          const target = document.querySelector(targetId);
+          if (target instanceof HTMLElement) {
+            target.scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      }
+
+      const startTime = Date.now();
+
+      const hoursEl = document.getElementById("counter-hours");
+      const minutesEl = document.getElementById("counter-minutes");
+      const secondsEl = document.getElementById("counter-seconds");
+      const msEl = document.getElementById("counter-ms");
+
+      function updateCounter() {
+        const diff = Date.now() - startTime;
+
+        const hours = Math.floor(diff / (1000 * 60 * 60));
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+        const ms = diff % 1000;
+
+        if (hoursEl) {
+          hoursEl.textContent = hours.toString().padStart(2, "0");
+        }
+        if (minutesEl) {
+          minutesEl.textContent = minutes.toString().padStart(2, "0");
+        }
+        if (secondsEl) {
+          secondsEl.textContent = seconds.toString().padStart(2, "0");
+        }
+        if (msEl) {
+          msEl.textContent = ms.toString().padStart(3, "0");
+        }
+      }
+
+      if (hoursEl && minutesEl && secondsEl && msEl) {
+        updateCounter();
+        const counterTimer = window.setInterval(updateCounter, 50);
+        window.addEventListener(
+          "pagehide",
+          () => {
+            window.clearInterval(counterTimer);
+          },
+          { once: true },
+        );
+      }
+    });
+  </script>
+</BaseLayout>
