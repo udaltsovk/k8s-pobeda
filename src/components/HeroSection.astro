@@ -1,0 +1,48 @@
+<section class="relative flex h-screen items-center justify-center overflow-hidden text-center">
+  <div
+    id="hero-background"
+    class="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_center,_#ebf4ff_0%,_#ffffff_100%)]"
+  >
+  </div>
+  <div
+    class="hero-overlay absolute inset-0 -z-10 bg-[linear-gradient(180deg,_rgba(255,255,255,0)_0%,_rgba(255,255,255,0.8)_100%)]"
+  >
+  </div>
+  <div class="z-10 px-8">
+    <img
+      src="/kubernetes-logo.svg"
+      alt="Kubernetes Logo"
+      class="mb-8 inline-block h-[180px] w-[180px] animate-[spin_30s_linear_infinite] drop-shadow-[0_4px_6px_rgba(50,108,229,0.2)] sm:h-[220px] sm:w-[220px]"
+      width="180"
+      height="180"
+      fetchpriority="high"
+    />
+    <h1
+      class="m-0 text-[clamp(3rem,8vw,6rem)] font-black uppercase tracking-[-0.02em] text-[#326ce5]"
+    >
+      КУБЫПОБЕДА
+    </h1>
+    <p class="mt-2 text-[clamp(1.2rem,3vw,2rem)] font-light text-[#5f6368]">
+      Очередной год победы Kubernetes
+    </p>
+  </div>
+  <a
+    href="#main-content"
+    class="scroll-down-arrow absolute bottom-10 left-1/2 -translate-x-1/2 text-[#326ce5] opacity-70 transition-opacity duration-300 hover:opacity-100 focus-visible:opacity-100"
+    aria-label="Перейти к основному содержимому"
+  >
+    <svg
+      width="40"
+      height="40"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M12 5v14M19 12l-7 7-7-7"></path>
+    </svg>
+  </a>
+</section>
