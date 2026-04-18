@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>КУБЫПОБЕДА.РФ</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="hero">
+    <div id="hero-background"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes Logo" class="spinning-logo">
+      <h1>КУБЫПОБЕДА</h1>
+      <p class="subtitle">Очередной год победы Kubernetes</p>
+    </div>
+    <a href="#main-content" class="scroll-down-arrow">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+    </a>
+  </div>
+
+  <main id="main-content" class="content">
+    <section class="centered">
+      <h2>Статус: SYNCING</h2>
+      <p class="reason-title">
+        Почему <span id="current-year"></span> это год Кубы?
+      </p>
+      
+      <div class="facts-grid">
+        <div class="fact-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h14a2 2 0 0 0 2-2V7.5L14.5 2H6a2 2 0 0 0-2 2v4"/><polyline points="14 2 14 8 20 8"/><path d="M2 15h10"/><path d="M9 18v-6"/></svg>
+          </div>
+          <h3>YAML Native</h3>
+          <p>Родной язык конфигурации. Отступы важнее смысла, а количество строк измеряется тысячами.</p>
+        </div>
+        <div class="fact-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3>OOMKilled</h3>
+          <p>Не ошибка, а запланированная процедура очистки памяти. Решение всегда одно - увеличить лимиты.</p>
+        </div>
+        <div class="fact-card">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <h3>Масштаб</h3>
+          <p>Зачем один сервер, если можно поднять целый кластер ради статического сайта?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="centered counter-section">
+      <h2>Стабильность кластера</h2>
+      <div id="victory-counter" class="counter">
+        <div class="counter-item">
+          <span class="number" id="counter-hours">00</span>
+          <span class="label">Часов</span>
+        </div>
+        <div class="counter-item">
+          <span class="number" id="counter-minutes">00</span>
+          <span class="label">Минут</span>
+        </div>
+        <div class="counter-item">
+          <span class="number" id="counter-seconds">00</span>
+          <span class="label">Секунд</span>
+        </div>
+        <div class="counter-item">
+          <span class="number" id="counter-ms">000</span>
+          <span class="label">мс</span>
+        </div>
+      </div>
+      <p class="counter-desc">
+        Времени прошло с момента последнего Pending пода
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Крутится на Github Pages (денег на кубовый кластер не хватило)</p>
+    <p>Сурсы на <a href="https://github.com/misshanya/k8s-pobeda">GitHub</a></p>
+  </footer>
+</body>
+</html>
