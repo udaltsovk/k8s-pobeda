@@ -1,0 +1,30 @@
+---
+interface Fact {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+interface Props {
+  facts: Fact[];
+}
+
+const { facts } = Astro.props;
+---
+
+<section class="mb-24 text-center">
+  <h2 class="mb-4 text-[clamp(2rem,4vw,3rem)] text-[#0f1316]">Статус: SYNCING</h2>
+  <p class="mb-12 text-2xl text-[#5f6368]">Почему <span id="current-year"></span> это год кубов?</p>
+
+  <div class="mt-12 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+    {
+      facts.map(fact => (
+        <article class="rounded-xl border border-[#e2e8f0] bg-[#f8f9fa] p-8 text-left transition duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.05)]">
+          <div class="mb-4 h-12 w-12 text-[#326ce5]" set:html={fact.icon} />
+          <h3 class="mb-4 text-2xl font-semibold text-[#0f1316]">{fact.title}</h3>
+          <p class="m-0 text-[#5f6368]">{fact.description}</p>
+        </article>
+      ))
+    }
+  </div>
+</section>

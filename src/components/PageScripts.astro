@@ -1,0 +1,65 @@
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const yearElement = document.getElementById("current-year");
+    if (yearElement) {
+      yearElement.textContent = new Date().getFullYear().toString();
+    }
+
+    const arrow = document.querySelector(".scroll-down-arrow");
+    if (arrow instanceof HTMLAnchorElement) {
+      arrow.addEventListener("click", e => {
+        e.preventDefault();
+        const targetId = arrow.getAttribute("href");
+        if (!targetId) {
+          return;
+        }
+
+        const target = document.querySelector(targetId);
+        if (target instanceof HTMLElement) {
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
+    }
+
+    const startTime = Date.now();
+
+    const hoursEl = document.getElementById("counter-hours");
+    const minutesEl = document.getElementById("counter-minutes");
+    const secondsEl = document.getElementById("counter-seconds");
+    const msEl = document.getElementById("counter-ms");
+
+    function updateCounter() {
+      const diff = Date.now() - startTime;
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff / (1000 * 60)) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+      const ms = diff % 1000;
+
+      if (hoursEl) {
+        hoursEl.textContent = hours.toString().padStart(2, "0");
+      }
+      if (minutesEl) {
+        minutesEl.textContent = minutes.toString().padStart(2, "0");
+      }
+      if (secondsEl) {
+        secondsEl.textContent = seconds.toString().padStart(2, "0");
+      }
+      if (msEl) {
+        msEl.textContent = ms.toString().padStart(3, "0");
+      }
+    }
+
+    if (hoursEl && minutesEl && secondsEl && msEl) {
+      updateCounter();
+      const counterTimer = window.setInterval(updateCounter, 50);
+      window.addEventListener(
+        "pagehide",
+        () => {
+          window.clearInterval(counterTimer);
+        },
+        { once: true },
+      );
+    }
+  });
+</script>
